@@ -4,21 +4,7 @@
     <head>
         <meta charset="UTF-8" />
         <title>Maria's Fountain Pen Collection</title>
-        <style type="text/css"> /*this is the css styling*/
-           body { /*Main background*/
-                background-color: dimgrey;
-                margin: 0;
-                background-image: url(kiwihug-qv05FvdE26k-unsplash.jpg);
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat; 
-                background-attachment: fixed;
-            }
-            .showcase-item { /*Put pen images and captions side by side and alternating, fix this*/
-            display: flex;
-            gap: 1rem;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css" /> <!-- use this instead of css in this file so that can use on multiple pages-->
     </head>
     
     
@@ -29,36 +15,36 @@
             <h1>Maria's Fountain Pen Collection</h1>
             
             <!--Pen 1-->
-            <div class= "showcase-item img-left pen-caption-right"> 
+            <div class= "showcase-item flip"> 
                 <img src="pen-images/eco-yellow-m-schatten.png" /> <!-- Resize images in photoshop to MAX 1000px-->
-                <div class="pen-caption-right"> <!-- maybe name like this instead of the div above? Idk look it up, -->
+                <div class="pen-caption"> <!-- maybe name like this instead of the div above? Idk look it up, -->
                     <h2>TWSBI Eco Transparent Yellow</h2>
                     <p>This was the first fancy-ish pen that I bought</p>
                 </div>
             </div>
             
             <!--Pen 2-->
-             <div class= "showcase-item img-right pen-caption-left">
+             <div class= "showcase-item">
                 <img src="pen-images/1079.webp" />
-                 <div id=""> <!--check spacing on all divs-->
+                 <div class="pen-caption"> <!--check spacing on all divs-->
                     <h2>TWSBI Eco Glow Purple</h2>
                     <p>My first pen with a stub nib!</p>
                  </div>
             </div>
             
             <!--Pen3-->
-            <div class= "showcase-item img-left pen-caption-right">
+            <div class= "showcase-item flip">
                 <img src =""/>
-                <div id="">
+                <div class="pen-caption">
                     <h2> Pilot Kakuno Transparent Blue</h2>
                     <p> My first Pilot Kakuno. It is from the family series and I selected a fine nib</p>
                 </div>
             </div>
             
             <!--Pen 4-->
-            <div class= "showcase-item img-right pen-caption-left">
+            <div class= "showcase-item">
                 <img src="pen-images/Pilot-Kakuno-Fountain-Pen-Translucent-Pink-Fountain-Pilot-Namiki-Pens-Fine.png.webp"/>
-                <div id= "">
+                <div class= "pen-caption">
                     <h2> Pilot Kakuno Transparent Pink</h2>
                     <p>Loved the blue one so I got another pen from the family series in pink with a medium nib.</p>
                 </div>
