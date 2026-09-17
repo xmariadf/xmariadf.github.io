@@ -50,5 +50,42 @@
                 </div>
             </div>
         </section>
+        
+        <!--Scroll Animation on Pens-->
+         <script>
+          const pens = document.querySelectorAll('.showcase-item img');
+          let lastY = window.scrollY;
+          let ticking = false;
+          let stopTimer;
+
+          window.addEventListener('scroll', () => {
+            if (!ticking) {
+              window.requestAnimationFrame(() => {
+                const currentY = window.scrollY;
+
+                // AMPLIFIED DISTANCE: Multiplied by 0.4 instead of 0.15 for a clearer wiggle
+                let speed = (currentY - lastY) * 0.4; 
+
+                // INCREASED CEILING: Allowed to tilt up to 6 degrees so it's not too subtle
+                const maxTilt = 6;
+                let tilt = Math.max(-maxTilt, Math.min(maxTilt, speed));
+
+                // Apply the dynamic rotation
+                pens.forEach(img => img.style.transform = `rotate(${tilt}deg)`);
+
+                lastY = currentY;
+                ticking = false;
+
+                // GUARANTEED REST STATE: Instantly flattens the pens to exactly 0 the moment scroll stops
+                clearTimeout(stopTimer);
+                stopTimer = setTimeout(() => {
+                  pens.forEach(img => img.style.transform = 'rotate(0deg)');
+                }, 40); // 40ms ensures a fast response
+              });
+              ticking = true;
+            }
+          }, { passive: true });
+        </script>
+        
     </body>
 </html>
