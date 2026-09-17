@@ -66,8 +66,8 @@
                 // AMPLIFIED DISTANCE: Multiplied by 0.4 instead of 0.15 for a clearer wiggle
                 let speed = (currentY - lastY) * 0.4; 
 
-                // INCREASED CEILING: Allowed to tilt up to 6 degrees so it's not too subtle
-                const maxTilt = 6;
+                // INCREASED CEILING: Allowed to tilt up to 7 degrees so it's not too subtle
+                const maxTilt = 7;
                 let tilt = Math.max(-maxTilt, Math.min(maxTilt, speed));
 
                 // Apply the dynamic rotation
