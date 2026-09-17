@@ -1,13 +1,70 @@
-body { /*Main background*/
-                background-color: dimgrey;
-                margin: 0;
-                background-image: url(other-images/kiwihug-qv05FvdE26k-unsplash.jpg);
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat; 
-                background-attachment: fixed;
-            }
-            .showcase-item { /*Put pen images and captions side by side and alternating, fix this*/
-            display: flex;
-            gap: 1rem;
-            }
+/* Page background settings, global text color, and typography */
+body { 
+    background-color: #f4f4f4; 
+    margin: 0;
+    background-image: url(other-images/kiwihug-zGZYQQVmXw0-unsplash_ICHANGEDIT.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    color: rgba(90, 72, 65, 1); 
+    font-family: Garamond, Georgia, serif;
+    font-size: 1.15rem;       
+}
+
+/* Centers the main page title and adds spacing */
+#pen-showcase h1 {
+    background-color: rgba(249, 224, 260, 0.6)/*rgba(150, 184, 215, 0.54)*/;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 3.5rem;
+    font-family: Georgia, serif;
+    font-size: 2.2rem;
+    color: rgba(72, 57, 62, 1);
+}
+
+/* Cleans up spacing inside the caption text box */
+.pen-caption h2 {
+    font-size: 1.4rem;        
+    margin: 0 0 0.3rem 0;     /* Tight margin below the pen title */
+}
+
+.pen-caption p {
+    margin: 0;                
+}
+
+/* Aligns the pen image and text side-by-side and centers the row */
+.showcase-item { 
+    display: flex;
+    gap: 7%;                  /* Spacing adjusts fluidly on different displays */
+    align-items: flex-start;  /* Keeps the top alignment stable and uniform */
+    margin-bottom: 3rem;    
+    max-width: 650px;     
+    margin-left: auto;        /* Centers the rows on the page */
+    margin-right: auto;
+    padding: 0 1rem;      
+}
+
+/* Scales the diagonal pen images up to look full and balanced */
+.showcase-item img {
+    width: 33%;               /* Image scales perfectly on all displays */
+    max-width: 240px;     
+    min-width: 150px;     
+    height: auto;         
+    display: block;       
+    object-fit: contain;  
+    flex-shrink: 0;       
+}
+
+/* Allocates the remaining row width for the description text */
+.pen-caption {
+    width: 60%;               /* Text box scales perfectly on all displays */
+    text-align: left;     
+    padding-top: 2.2rem;      /* Visual nudge to center text line against diagonal pens */
+}
+
+/* Flips the row layout from right to left for alternating items */
+.showcase-item.flip {
+    flex-direction: row-reverse;
+}
