@@ -7,22 +7,26 @@ body {
     background-position: center;
     background-repeat: no-repeat; 
     background-attachment: fixed;
-    color: rgba(90, 72, 65, 1); 
+    color: rgba(90, 72, 65, .98); 
     font-family: Garamond, Georgia, serif;
     font-size: 1.15rem;       
 }
 
 /* Main Page Title */
 #pen-showcase h1 {
-    background-color: rgba(249, 224, 260, 0.6)/*rgba(150, 184, 215, 0.54)*/;
-    padding: 2rem;
+    background-color: rgba(249, 224, 260, 0.5)/*rgba(150, 184, 215, 0.54)*/;
+    padding: 2rem 2rem 1.6rem 2rem;
     text-align: center;
     margin-top: 0;
     margin-bottom: 3.5rem;
     font-family: Georgia, serif;
-    font-size: 2.2rem;
-    color: rgba(72, 57, 62, 1);
-    filter: drop-shadow(0 8px 7px rgba(72, 57, 62, 0.2));
+    font-size: 2.5rem;
+    font-weight: 650;
+    letter-spacing: 0.05em;
+    color: rgba(72, 57, 62, .95);
+    text-shadow: 1px 1px 3px rgba(72, 57, 62, 0.4);
+    filter: drop-shadow(0 6.5px 9px rgba(72, 57, 62, 0.2));
+    
 }
 
 /* Caption Box Spacing */
