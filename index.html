@@ -10,16 +10,19 @@
 
      <!--This what is seen on the website-->
     <body>
+        
+        <!-- <header>Maria Is Doodling</header> -->
+        
         <!--Overview of all Pens-->
         <section id="pen-showcase"> 
-            <h1>Maria's Fountain Pen Collection</h1>
+            <h2>Maria's Fountain Pen Collection</h2>
             
             <!--Pen 1-->
             <div class="showcase-item flip"> 
                 <img src="pen-images/eco-yellow-m-schatten.png" /> <!-- Resize images in photoshop to MAX 1000px-->
                 <div class="pen-caption"> <!-- maybe name like this instead of the div above? Idk look it up, -->
-                    <h2>TWSBI Eco Transparent Yellow</h2>
-                    <p>This was the first fancy-ish pen that I bought</p>
+                    <h3>TWSBI Eco Transparent Yellow</h3>
+                    <p>This was the first fancy-ish pen that I bought, and the one that sucked me into the hobby. I have only ever used the ink Vert Olive by Jacques Herbin in it. </p>
                 </div>
             </div>
             
@@ -27,8 +30,8 @@
              <div class="showcase-item">
                 <img src="pen-images/1079.webp" />
                  <div class="pen-caption">
-                    <h2>TWSBI Eco Glow Purple</h2>
-                    <p>My first pen with a stub nib!</p>
+                    <h3>TWSBI Eco Glow Purple</h3>
+                    <p>My first pen with a stub nib! In the dark it glows a soothing faint blue color.</p>
                  </div>
             </div>
             
@@ -36,7 +39,7 @@
             <div class="showcase-item flip">
                 <img src="pen-images/Pilot-Kakuno-Fountain-Pen-Translucent-Blue-Fountain-Pilot-Namiki-Pens-Fine.png.webp" />
                 <div class="pen-caption">
-                    <h2> Pilot Kakuno Transparent Blue</h2>
+                    <h3> Pilot Kakuno Transparent Blue</h3>
                     <p> My first Pilot Kakuno. It is from the family series and I selected a fine nib</p>
                 </div>
             </div>
@@ -45,12 +48,15 @@
             <div class="showcase-item">
                 <img src="pen-images/Pilot-Kakuno-Fountain-Pen-Translucent-Pink-Fountain-Pilot-Namiki-Pens-Fine.png.webp" />
                 <div class="pen-caption">
-                    <h2> Pilot Kakuno Transparent Pink</h2>
+                    <h3> Pilot Kakuno Transparent Pink</h3>
                     <p>Loved the blue one so I got another pen from the family series in pink with a medium nib.</p>
                 </div>
             </div>
         </section>
         
+        <footer> <h3> Woohoooo, you have reached the end!</h3></footer>
+        
+        <!--ANIMATIONS ETC-->
         <!--Scroll Animation on Pens-->
          <script>
           const pens = document.querySelectorAll('.showcase-item img');
@@ -66,8 +72,8 @@
                 // AMPLIFIED DISTANCE: Multiplied by 0.4 instead of 0.15 for a clearer wiggle
                 let speed = (currentY - lastY) * 0.4; 
 
-                // INCREASED CEILING: Allowed to tilt up to 7 degrees so it's not too subtle
-                const maxTilt = 7;
+                // INCREASED CEILING: Allowed to tilt up to 8 degrees so it's not too subtle
+                const maxTilt = 8;
                 let tilt = Math.max(-maxTilt, Math.min(maxTilt, speed));
 
                 // Apply the dynamic rotation

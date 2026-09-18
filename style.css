@@ -13,9 +13,9 @@ body {
 }
 
 /* Main Page Title */
-#pen-showcase h1 {
+#pen-showcase h2 {
     background-color: rgba(249, 224, 260, 0.5)/*rgba(150, 184, 215, 0.54)*/;
-    padding: 2rem 2rem 1.6rem 2rem;
+    padding: 2rem 2rem 1.5rem 2rem;
     text-align: center;
     margin-top: 0;
     margin-bottom: 3.5rem;
@@ -30,7 +30,7 @@ body {
 }
 
 /* Caption Box Spacing */
-.pen-caption h2 {
+.pen-caption h3 {
     font-size: 1.4rem;        
     margin: 0 0 0.3rem 0;     /* Margin below the pen title */
     filter: drop-shadow(0 4px 2px rgba(72, 57, 62, 0.2));
@@ -77,3 +77,21 @@ body {
 .showcase-item.flip {
     flex-direction: row-reverse;
 }
+
+footer {
+    background-color: rgba(150, 184, 215, 0.52);
+    margin-bottom: 0;
+    width: vw100;
+    padding-top: 1rem;
+    padding-bottom: .7rem;
+    text-align: center;
+    font-size: 2.4 rem;
+    text-shadow: 1px 1px 3px rgba(72, 57, 62, 0.4);
+    box-shadow: 0 -5px 11px 0 rgba(72, 57, 62, 0.15);
+}
+
+/* Pink Transparent Star - https://www.cursors-4u.com/cursor/pink-transparent-star */
+* {
+  cursor: url('https://cdn.cursors-4u.net/previews/pink-transparent-star-eca2d8c1-32.webp') 35 34, auto !important;
+}
+/* End www.Cursors-4U.com Code */
