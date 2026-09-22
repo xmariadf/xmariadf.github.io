@@ -1,97 +1,189 @@
-/* Page background settings, global text color, and typography */
+/* ==========================================================================
+   01. GLOBAL SETTINGS & VARIABLES
+   ========================================================================== */
+* {
+  /* Pink Transparent Star - https://cursors-4u.com */
+  cursor: url('https://cursors-4u.net') 35 34, auto !important;
+}
+
 body { 
-    background-color: #f4f4f4; 
+  background-color: #f4f4f4; 
+  margin: 0;
+  background-image: url(other-images/kiwihug-zGZYQQVmXw0-unsplash_ICHANGEDIT.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  color: rgba(90, 72, 65, .98); 
+  font-family: Garamond, Georgia, serif;
+  font-size: 1.15rem;       
+}
+
+
+/* ==========================================================================
+   02. SITE HEADER & TYPOGRAPHY
+   ========================================================================== */
+header {
+  background-color: rgba(245, 215, 238, 0.6);
+  padding: 2.5rem 2rem 2rem 2rem;
+  text-align: center;
+  position: fixed;
+  width: 100vw;
+  z-index: 999;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  -webkit-mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
+}
+
+header h1 {
+  font-family: Georgia, serif;
+  font-size: 2.8rem;        
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  word-spacing: .05em;
+  color: rgba(72, 57, 62, .95);
+  text-shadow: 1px 1px 3px rgba(72, 57, 62, 0.4);
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.2rem;
+  filter: drop-shadow(0 4px 2px rgba(72, 57, 62, 0.2));
     margin: 0;
-    background-image: url(other-images/kiwihug-zGZYQQVmXw0-unsplash_ICHANGEDIT.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
-    background-attachment: fixed;
-    color: rgba(90, 72, 65, .98); 
-    font-family: Garamond, Georgia, serif;
-    font-size: 1.15rem;       
 }
 
-/* Main Page Title */
-#pen-showcase h2 {
-    background-color: rgba(249, 224, 260, 0.5)/*rgba(150, 184, 215, 0.54)*/;
-    padding: 2rem 2rem 1.5rem 2rem;
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 3.5rem;
-    font-family: Georgia, serif;
-    font-size: 2.5rem;
-    font-weight: 650;
-    letter-spacing: 0.05em;
-    color: rgba(72, 57, 62, .95);
-    text-shadow: 1px 1px 3px rgba(72, 57, 62, 0.4);
-    filter: drop-shadow(0 6.5px 9px rgba(72, 57, 62, 0.2));
-    
+footer p{
+    margin-top: .4rem;
+    margin-bottom: 0;
 }
 
-/* Caption Box Spacing */
-.pen-caption h3 {
-    font-size: 1.4rem;        
-    margin: 0 0 0.3rem 0;     /* Margin below the pen title */
-    filter: drop-shadow(0 4px 2px rgba(72, 57, 62, 0.2));
+
+/* ==========================================================================
+   03. PEN SHOWCASE GRID (Layout & Structure)
+   ========================================================================== */
+#pen-showcase {
+  padding-top: 8.85rem;     /*spacing away from header*/
 }
 
-.pen-caption p {
-    margin: 0;
-    filter: drop-shadow(0 4px 2px rgba(72, 57, 62, 0.2));
-}
-
-/* Aligns the pen image and text*/
 .showcase-item { 
-    display: flex;
-    gap: 7%;                  /* Spacing adjusts on different displays */
-    align-items: flex-start;  /* Vertically alighning items */
-    margin-bottom: 3rem;    
-    max-width: 650px;     
-    margin-left: auto;        /* Centers the rows on the page */
-    margin-right: auto;
-    padding: 0 1rem;      
-}
-
-/* Scales the diagonal pen images up to look balanced */
-.showcase-item img {
-    width: 33%;               /* Image scales properly on different displays */
-    max-width: 240px;     
-    min-width: 150px;     
-    height: auto;         
-    display: block;       
-    object-fit: contain;  
-    flex-shrink: 0;
-    transition: transform 0.4s ease-out;  /* For scrolling animation on pens */
-}
-
-
-/* Remaining row width for the description text */
-.pen-caption {
-    width: 60%;               /* Text box scales properly on different displays */
-    text-align: left;     
-    padding-top: 2.2rem;      /* Make caption look visually centered to image */
+  display: flex;
+  gap: 5%;                  /* Spacing adjusts on different displays */
+  align-items: flex-start;  /* Vertically aligning items */
+  margin-bottom: 4rem;    /* Spacing between rows */
+  max-width: 650px;     
+  margin-left: auto;        /* Centers the rows on the page */
+  margin-right: auto;
+  padding: 0 1rem;      
 }
 
 /* Flips the row layout from right to left for alternating items */
 .showcase-item.flip {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
+
+/* ==========================================================================
+   04. SHOWCASE ITEMS (Images & Captions)
+   ========================================================================== */
+/* Scales the diagonal pen images up to look balanced */
+.showcase-item img {
+  width: 34%;               /* Image scales properly on different displays */
+  max-width: 240px;     
+  min-width: 150px;     
+  height: auto;         
+  display: block;       
+  object-fit: contain;  
+  flex-shrink: 0;
+  transition: transform 0.4s ease-out;  /* For scrolling animation on pens */
+  opacity: 90%;
+}
+
+.showcase-item img:hover {
+    transform: rotate(20deg)!important; /*added !important so that it is not overridden by java script*/
+}
+
+/* Remaining row width for the description text */
+.pen-caption {
+  width: 61%;               /* Text box scales properly on different displays */
+  text-align: justify;     
+  padding-top: 2rem;        /* Make caption look visually centered to image */
+}
+
+
+.pen-caption h2 {
+  font-size: 1.4rem;        
+  margin: 0 0 0.3rem 0;     /* Margin below the pen title */
+  filter: drop-shadow(0 4px 2px rgba(72, 57, 62, 0.2));
+  
+  text-align: left;         
+  line-height: 1.3;         
+  word-break: break-word;   /* Wraps longer words gracefully if tight */
+}
+
+/* Keeps flipped rows matching the design flow perfectly */
+.showcase-item.flip .pen-caption h2 {
+  text-align: right;
+}
+
+.pen-caption p {
+  margin: 0;
+  filter: drop-shadow(0 4px 2px rgba(72, 57, 62, 0.2));
+}
+
+/* TEXT GLOW TRIGGERS: Splits the hover colors for high-contrast readability */
+.pen-caption:hover h2 {
+  color: rgba(72, 57, 62, 1);
+  text-shadow: 0 0 8px rgba(255, 213, 237, 0.95); 
+}
+
+.pen-caption:hover p {
+  color: rgba(72, 57, 62, 1);
+  text-shadow: 0 0 8px rgb(207, 231, 253); /* old Blue Glow rgb(192, 218, 241)*/
+}
+
+/* --- SPECIFIC ITEM ADJUSTMENTS --- */
+/* Reducing the top padding of pen caption to make blue pen appear to sit lower */
+.pen-caption.nudge {
+  padding-top: 1.3rem;      /* Reduced from 2rem to pull the text column up */
+} 
+
+/* ==========================================================================
+   05. SITE FOOTER
+   ========================================================================== */
 footer {
-    background-color: rgba(150, 184, 215, 0.52);
-    margin-bottom: 0;
-    width: vw100;
-    padding-top: 1rem;
-    padding-bottom: .7rem;
-    text-align: center;
-    font-size: 2.4 rem;
-    text-shadow: 1px 1px 3px rgba(72, 57, 62, 0.4);
-    box-shadow: 0 -5px 11px 0 rgba(72, 57, 62, 0.15);
+  background-color: rgba(150, 184, 215, 0.5);
+  margin-bottom: 0;
+  padding-top: 1.3rem;
+  padding-bottom: .9rem;
+  text-align: center;
+  font-size: 0.95rem;       /* SYNTAX FIX: Shrunk down slightly to look clean and professional */
+  text-shadow: 1px 1px 3px rgba(72, 57, 62, 0.4);
+  box-shadow: 0 -5px 11px 0 rgba(72, 57, 62, 0.15);
+  -webkit-mask-image: linear-gradient(to top, black 95%, transparent 100%);
+  mask-image: linear-gradient(to top, black 95%, transparent 100%);
 }
 
-/* Pink Transparent Star - https://www.cursors-4u.com/cursor/pink-transparent-star */
-* {
-  cursor: url('https://cdn.cursors-4u.net/previews/pink-transparent-star-eca2d8c1-32.webp') 35 34, auto !important;
+
+/* ==========================================================================
+   06. MACBOOK SPLIT-SCREEN COMFORT ADJUSTMENTS
+   ========================================================================== */
+@media (max-width: 850px) {
+  /* Slims down your fixed header elements ONLY when the window gets narrowed */
+  header {
+    padding: 1.5rem 1.5rem 1.2rem 1.5rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;      /* Shrinks the title just enough to fit comfortably on screen */
+  }
+
+  #pen-showcase {
+    padding-top: 7rem;      /* Dynamically matches the slimmer header height gap */
+  }
+
+  /* Uses browser text engines to stop awkward title line breaks */
+  .pen-caption h2 {
+    text-wrap: pretty;      /* Forbids lone orphan words on a new line */
+  }
 }
-/* End www.Cursors-4U.com Code */

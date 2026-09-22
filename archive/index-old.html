@@ -11,15 +11,17 @@
      <!--This what is seen on the website-->
     <body>
         
-        <header> <h1>Maria's Fountain Pen Collection</h1> </header> <!-- originally had this as h2 under pen showcase in case I wanted to have more pages and a navigation bar, but it was out of scope time-wise...better planning next time.-->
+        <!-- <header>Maria Is Doodling</header> -->
         
         <!--Overview of all Pens-->
         <section id="pen-showcase"> 
+            <h2>Maria's Fountain Pen Collection</h2>
+            
             <!--Pen 1-->
             <div class="showcase-item flip"> 
                 <img src="pen-images/eco-yellow-m-schatten.png" /> <!-- Resize images in photoshop to MAX 1000px-->
                 <div class="pen-caption"> <!-- maybe name like this instead of the div above? Idk look it up, -->
-                    <h2>TWSBI Eco Transparent Yellow</h2>
+                    <h3>TWSBI Eco Transparent Yellow</h3>
                     <p>This was the first fancy-ish pen that I bought, and the one that drew me into the hobby. It has occasional flow issues towards the end of a writing (or drawing) session, but the nib feels amazingly smooth against paper. I've only ever used the ink Vert Olive by Jacques Herbin in it (guess I got used to it). </p>
                 </div>
             </div>
@@ -28,7 +30,7 @@
              <div class="showcase-item">
                 <img src="pen-images/1079.webp" />
                  <div class="pen-caption">
-                    <h2>TWSBI Eco Glow Purple</h2>
+                    <h3>TWSBI Eco Glow Purple</h3>
                     <p>My first pen with a stub nib! In the dark it glows a soothing faint blue color. Definitely worth the purchase, though I ran into trouble when I first filled it. The pen can be finicky with dry inks, and I had chosen the both dry and shimmery ink Cat's Eye Nebula by Colorverse (without any lubricant added). <!--The first time I filled it with ink, I used Cat's Eye Nebula by Colorverse. Unfortunately, the combination of dry ink and shimmer did clog it (maybe I'll try adding lubricant next time).--></p>
                  </div>
             </div>
@@ -36,8 +38,8 @@
             <!--Pen3-->
             <div class="showcase-item flip">
                 <img src="pen-images/Pilot-Kakuno-Fountain-Pen-Translucent-Blue-Fountain-Pilot-Namiki-Pens-Fine.png.webp" />
-                <div class="pen-caption nudge">
-                    <h2> Pilot Kakuno Transparent Blue</h2>
+                <div class="pen-caption">
+                    <h3> Pilot Kakuno Transparent Blue</h3>
                     <p> My first Pilot Kakuno! It's part of the family series so it has a cute smiley face on the nib. I selected the fine nib, and was suprised and impressed by the writing feel and smooth ink flow (especially considering its price)! It's super beginner friendly and has performed well with most inks I have tried.</p>
                 </div>
             </div>
@@ -46,8 +48,8 @@
             <div class="showcase-item">
                 <img src="pen-images/Pilot-Kakuno-Fountain-Pen-Translucent-Pink-Fountain-Pilot-Namiki-Pens-Fine.png.webp" />
                 <div class="pen-caption">
-                    <h2> Pilot Kakuno Transparent Pink</h2>
-                    <p>Loved the blue Kakuno so much that I got another pen from the family series in pink with a medium nib. I love how nos&shy;tal&shy;gic the trans&shy;par&shy;ent colors of this series are! The medium nib remains a fine line (as&nbsp;Japanese&nbsp;medium nibs usually do), but has just enough thick&shy;ness to show off ink qualities.</p>
+                    <h3> Pilot Kakuno Transparent Pink</h3>
+                    <p>Loved the blue Kakuno so much that I got another pen from the family series in pink with a medium nib. I love how nostalgic the transparent colors of this series are! The medium nib remains a fine line (as Japanese medium nibs usually do), but has just enough thickness to show off ink qualities.</p>
                 </div>
             </div>
         </section>
@@ -93,64 +95,6 @@
             }
           }, { passive: true });
         </script>
-        
-        <!-- THE COMPLETED GLITTER TRAIL SCRIPT -->
-<script>
-// SPACING CLOCK: Prevents the new, brighter colors from clumping together too fast
-let lastSpawnTime = 0;
-
-document.addEventListener('mousemove', function(e) {
-  const currentTime = Date.now();
-  
-  // MICRO THROTTLE: A tiny 15ms buffer spaces the stars out to restore your original flow ratio
-  if (currentTime - lastSpawnTime < 15) {
-    return; 
-  }
-  lastSpawnTime = currentTime;
-
-  // Create a new star particle
-  const star = document.createElement('div');
-  
-  // RESTORATION: Your exact original text character setup and position flow
-  star.innerText = '✦'; 
-  star.style.position = 'fixed';
-  star.style.left = e.clientX + 'px';
-  star.style.top = e.clientY + 'px';
-  star.style.pointerEvents = 'none'; 
-  star.style.zIndex = '10000'; 
-  
-  // RESTORATION: Your exact original size randomization range (8px to 20px)
-  const size = Math.random() * 12 + 8; 
-  star.style.fontSize = size + 'px';
-  
-  // PASTELED COLORS: Your exact new luminous pastel pink, crisp steel blue, and soft cream yellow
-  const colors = ['rgba(255, 213, 237, 0.95)', 'rgb(192, 218, 241)', 'rgba(255, 242, 190, 0.8)'];
-  star.style.color = colors[Math.floor(Math.random() * colors.length)];
-  
-  // SOFT EDGES: A tight 4px blur to give the star edges a slightly blurred, magical glow
-  star.style.textShadow = '0 0 4px currentColor';
-  
-  // RESTORATION: Your exact original physical drift movement and 0.6s transition speed
-  star.style.transform = `translate(${(Math.random() - 0.5) * 20}px, ${(Math.random() - 0.5) * 20}px)`;
-  star.style.transition = 'all 0.6s ease-out';
-  star.style.opacity = '1';
-
-  // Inject the star onto the page
-  document.body.appendChild(star);
-
-  // RESTORATION: Your exact original animation timeouts for fade out and shrink
-  setTimeout(() => {
-    star.style.opacity = '0';
-    star.style.fontSize = '0px';
-  }, 50);
-
-  // Clean up the DOM by deleting old stars so your site doesn't lag
-  setTimeout(() => {
-    star.remove();
-  }, 600);
-});
-</script>
-
         
     </body>
 </html>

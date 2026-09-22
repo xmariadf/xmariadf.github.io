@@ -1,0 +1,97 @@
+/* Page background settings, global text color, and typography */
+body { 
+    background-color: #f4f4f4; 
+    margin: 0;
+    background-image: url(other-images/kiwihug-zGZYQQVmXw0-unsplash_ICHANGEDIT.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    color: rgba(90, 72, 65, .98); 
+    font-family: Garamond, Georgia, serif;
+    font-size: 1.15rem;       
+}
+
+/* Main Page Title */
+#pen-showcase h2 {
+    background-color: rgba(249, 224, 260, 0.5)/*rgba(150, 184, 215, 0.54)*/;
+    padding: 2rem 2rem 1.5rem 2rem;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 3.5rem;
+    font-family: Georgia, serif;
+    font-size: 2.5rem;
+    font-weight: 650;
+    letter-spacing: 0.05em;
+    color: rgba(72, 57, 62, .95);
+    text-shadow: 1px 1px 3px rgba(72, 57, 62, 0.4);
+    filter: drop-shadow(0 6.5px 9px rgba(72, 57, 62, 0.2));
+    
+}
+
+/* Caption Box Spacing */
+.pen-caption h3 {
+    font-size: 1.4rem;        
+    margin: 0 0 0.3rem 0;     /* Margin below the pen title */
+    filter: drop-shadow(0 4px 2px rgba(72, 57, 62, 0.2));
+}
+
+.pen-caption p {
+    margin: 0;
+    filter: drop-shadow(0 4px 2px rgba(72, 57, 62, 0.2));
+}
+
+/* Aligns the pen image and text*/
+.showcase-item { 
+    display: flex;
+    gap: 7%;                  /* Spacing adjusts on different displays */
+    align-items: flex-start;  /* Vertically alighning items */
+    margin-bottom: 3.5rem;    /*increasing from 3 to add more space since captions have lengthened*/
+    max-width: 650px;     
+    margin-left: auto;        /* Centers the rows on the page */
+    margin-right: auto;
+    padding: 0 1rem;      
+}
+
+/* Scales the diagonal pen images up to look balanced */
+.showcase-item img {
+    width: 33%;               /* Image scales properly on different displays */
+    max-width: 240px;     
+    min-width: 150px;     
+    height: auto;         
+    display: block;       
+    object-fit: contain;  
+    flex-shrink: 0;
+    transition: transform 0.4s ease-out;  /* For scrolling animation on pens */
+}
+
+
+/* Remaining row width for the description text */
+.pen-caption {
+    width: 60%;               /* Text box scales properly on different displays */
+    text-align: justify;     
+    padding-top: 2rem;      /* Make caption look visually centered to image */ /*shrinking from 2.2rem now that captions are longer. The blue pen still looks to high to me, needs indvidual adjustment.*/
+}
+
+/* Flips the row layout from right to left for alternating items */
+.showcase-item.flip {
+    flex-direction: row-reverse;
+}
+
+footer {
+    background-color: rgba(150, 184, 215, 0.52);
+    margin-bottom: 0;
+    width: vw100;
+    padding-top: .8rem;
+    padding-bottom: .5rem;
+    text-align: center;
+    font-size: 2.4 rem;
+    text-shadow: 1px 1px 3px rgba(72, 57, 62, 0.4);
+    box-shadow: 0 -5px 11px 0 rgba(72, 57, 62, 0.15);
+}
+
+/* Pink Transparent Star - https://www.cursors-4u.com/cursor/pink-transparent-star */
+* {
+  cursor: url('https://cdn.cursors-4u.net/previews/pink-transparent-star-eca2d8c1-32.webp') 35 34, auto !important;
+}
+/* End www.Cursors-4U.com Code */
