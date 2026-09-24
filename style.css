@@ -1,10 +1,11 @@
 /* ==========================================================================
    01. GLOBAL SETTINGS & VARIABLES
    ========================================================================== */
+/* Pink Transparent Star - https://www.cursors-4u.com/cursor/pink-transparent-star */
 * {
-  /* Pink Transparent Star - https://cursors-4u.com */
-  cursor: url('https://cursors-4u.net') 35 34, auto !important;
+  cursor: url('https://cdn.cursors-4u.net/previews/pink-transparent-star-eca2d8c1-32.webp') 35 34, auto !important;
 }
+/* End www.Cursors-4U.com Code */
 
 body { 
   background-color: #f4f4f4; 
@@ -28,7 +29,7 @@ header {
   padding: 2.5rem 2rem 2rem 2rem;
   text-align: center;
   position: fixed;
-  width: 100vw;
+  width: 100%;
   z-index: 999;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
